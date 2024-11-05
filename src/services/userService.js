@@ -36,7 +36,6 @@ const userService = {
 
     const updateData = cleanObject(fields);
 
-    console.log(updateData);
     const updatedUser = await prisma.user.update({
       where: { id },
       data: updateData,

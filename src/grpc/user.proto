@@ -34,9 +34,9 @@ message UsersList {
 
 message UserUpdate {
   int32 id = 1;
-  string name = 2;
-  string firstLastName = 3;
-  string secondLastName = 4;
+  optional string name = 2;
+  optional string firstLastName = 3;
+  optional string secondLastName = 4;
 }
 
 message UserProfile {
