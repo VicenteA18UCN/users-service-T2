@@ -45,7 +45,7 @@ const userService = {
 
   async getProgress(userId) {
     const progress = await prisma.userProgress.findMany({
-      where: { id: userId },
+      where: { userId },
       select: {
         subject: {
           select: {
