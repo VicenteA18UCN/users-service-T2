@@ -6,6 +6,7 @@ service UserService {
   rpc GetAll (Empty) returns (UsersList);
   rpc Profile (UserId) returns (UserProfile);
   rpc UpdateProfile (UserUpdate) returns (UserUpdate);
+  rpc GetProgress (UserId) returns (UserProgressList);
 }
 
 message Empty {}
@@ -30,6 +31,15 @@ message User {
 
 message UsersList {
   repeated User users = 1;
+}
+
+message UserProgressItem {
+  int32 id = 1;    
+  string code = 2;
+}
+
+message UserProgressList {
+  repeated UserProgressItem progress = 1;
 }
 
 message UserUpdate {

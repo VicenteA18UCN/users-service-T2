@@ -42,6 +42,25 @@ const userService = {
     });
     return updatedUser;
   },
+
+  async getProgress(userId) {
+    const progress = await prisma.userProgress.findMany({
+      where: { id: userId },
+      select: {
+        subject: {
+          select: {
+            id: true,
+            code: true,
+          },
+        },
+      },
+    });
+
+    return progress.map((item) => ({
+      id: item.subject.id,
+      code: item.subject.code,
+    }));
+  },
 };
 
 export default userService;

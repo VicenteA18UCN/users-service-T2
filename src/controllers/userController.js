@@ -25,6 +25,16 @@ const userController = {
       callback(error);
     }
   },
+  async getProgress(call, callback) {
+    try {
+      const userId = call.request.id;
+      const progress = await userService.getProgress(userId);
+
+      callback(null, { progress });
+    } catch (error) {
+      callback(error);
+    }
+  },
 };
 
 export default userController;
