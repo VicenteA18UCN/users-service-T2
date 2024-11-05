@@ -4,6 +4,7 @@ package auth;
 
 service AuthService {
   rpc Register (RegisterRequest) returns (RegisterResponse);
+  rpc UpdatePassword (UpdatePasswordRequest) returns (UpdatePasswordResponse);
 }
 
 message RegisterRequest {
@@ -28,4 +29,14 @@ message RegisterResponse {
   int32 careerId = 7;
   int32 roleId = 8;
   bool isEnabled = 9;
+}
+
+message UpdatePasswordRequest {
+  int32 userId = 1;
+  string oldPassword = 2;
+  string newPassword = 3;
+}
+
+message UpdatePasswordResponse {
+  string message = 1;
 }

@@ -58,6 +58,24 @@ const authService = {
       createdAt: newUser.createdAt.toISOString(),
     };
   },
+
+  async updatePassword(userId, oldPassword, newPassword) {
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+    });
+    if (!user) throw new Error("User not found");
+
+    const isMatch = await bcrypt.compare(oldPassword, user.hashedPassword);
+    if (!isMatch) throw new Error("Current password is incorrect");
+
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+
+    await prisma.user.update({
+      where: { id: userId },
+      data: { hashedPassword: hashedNewPassword },
+    });
+    return { message: "Password updated successfully" };
+  },
 };
 
 export default authService;

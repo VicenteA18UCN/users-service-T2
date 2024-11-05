@@ -33,6 +33,22 @@ const authController = {
       });
     }
   },
+  async updatePassword(call, callback) {
+    try {
+      const { userId, oldPassword, newPassword } = call.request;
+      const response = await authService.updatePassword(
+        userId,
+        oldPassword,
+        newPassword
+      );
+      callback(null, response);
+    } catch (error) {
+      callback({
+        code: grpc.status.INVALID_ARGUMENT,
+        message: error.message,
+      });
+    }
+  },
 };
 
 export default authController;
