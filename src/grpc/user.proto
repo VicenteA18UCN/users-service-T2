@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+  rpc GetAll (Empty) returns (UsersList);
+  rpc GetProfile (UserId) returns (User);
+  rpc UpdateProfile (UserProfile) returns (UserProfile);
+  rpc GetProgress (UserId) returns (UserProgress);
+  rpc UpdateProgress (UserProgressUpdate) returns (UserProgress);
+}
+
+message Empty {}
+
+message Career {
+  int32 id = 1;
+  string name = 2;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string firstLastName = 3;
+  string secondLastName = 4;
+  string email = 5;
+  string rut = 6;
+  Career career = 7;
+}
+
+message UsersList {
+  repeated User users = 1;
+}
+
+
+message UserId {
+  int32 id = 1;
+}
+
+message UserProfile {
+  int32 id = 1;
+  string name = 2;
+  string firstLastName = 3;
+  string secondLastName = 4;
+  string email = 5;
+  int32 careerId = 6;
+  int32 roleId = 7;
+}
+
+message UserProgress {
+  int32 userId = 1;
+  repeated Subject subjects = 2;
+}
+
+message Subject {
+  int32 id = 1;
+  string code = 2;
+  string name = 3;
+  string department = 4;
+  int32 credits = 5;
+  int32 semester = 6;
+}
+
+message UserProgressUpdate {
+  int32 userId = 1;
+  repeated int32 addSubjectIds = 2;
+  repeated int32 removeSubjectIds = 3;
+}
