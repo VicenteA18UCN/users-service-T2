@@ -16,9 +16,9 @@ async function main() {
 
   // Datos para las carreras
   const careersData = [
-    { name: "Ingeniería Civil", version: 1 },
-    { name: "Ingeniería en Computación", version: 1 },
-    { name: "Ingeniería Industrial", version: 1 },
+    { name: "Ingeniería Civil" },
+    { name: "Ingeniería en Computación" },
+    { name: "Ingeniería Industrial" },
   ];
 
   const careers = await Promise.all(
@@ -30,12 +30,10 @@ async function main() {
     {
       name: "Admin",
       description: "Administrador con acceso completo",
-      version: 1,
     },
     {
       name: "User",
       description: "Usuario regular con acceso limitado",
-      version: 1,
     },
   ];
 
@@ -54,7 +52,6 @@ async function main() {
       password: "a",
       careerId: careers[0].id,
       roleId: roleAdmin.id,
-      version: 1,
     },
     {
       name: "User",
@@ -65,7 +62,6 @@ async function main() {
       password: "a",
       careerId: careers[1].id,
       roleId: roleUser.id,
-      version: 1,
     },
   ];
 
@@ -84,7 +80,6 @@ async function main() {
           roleId: user.roleId,
           isEnabled: true,
           createdAt: new Date(),
-          version: user.version,
         },
       });
     })
@@ -98,7 +93,6 @@ async function main() {
       department: "Matemáticas",
       credits: 6,
       semester: 1,
-      version: 1,
     },
     {
       code: "PHY101",
@@ -106,7 +100,6 @@ async function main() {
       department: "Física",
       credits: 6,
       semester: 1,
-      version: 1,
     },
     {
       code: "CHE101",
@@ -114,7 +107,6 @@ async function main() {
       department: "Química",
       credits: 5,
       semester: 1,
-      version: 1,
     },
     {
       code: "BIO101",
@@ -122,7 +114,6 @@ async function main() {
       department: "Biología",
       credits: 5,
       semester: 1,
-      version: 1,
     },
     {
       code: "CS101",
@@ -130,7 +121,6 @@ async function main() {
       department: "Ciencias de la Computación",
       credits: 6,
       semester: 1,
-      version: 1,
     },
   ];
 
@@ -144,7 +134,6 @@ async function main() {
           credits: subject.credits,
           semester: subject.semester,
           createdAt: new Date(),
-          version: subject.version,
         },
       })
     )
@@ -156,25 +145,21 @@ async function main() {
       userId: users[0].id,
       subjectId: subjects[0].id,
       createdAt: new Date(),
-      version: 1,
     },
     {
       userId: users[0].id,
       subjectId: subjects[1].id,
       createdAt: new Date(),
-      version: 1,
     },
     {
       userId: users[1].id,
       subjectId: subjects[2].id,
       createdAt: new Date(),
-      version: 1,
     },
     {
       userId: users[1].id,
       subjectId: subjects[3].id,
       createdAt: new Date(),
-      version: 1,
     },
   ];
 

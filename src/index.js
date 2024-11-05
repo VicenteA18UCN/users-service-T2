@@ -1,27 +1,28 @@
-import grpc from "@grpc/grpc-js";
-import protoLoader from "@grpc/proto-loader";
-import path from "path";
-import userController from "./controllers/userController.js";
+import dotenv from "dotenv";
+import { ServerCredentials } from "@grpc/grpc-js";
+import server from "./server.js";
 
-const PROTO_PATH = path.join("src", "grpc", "user.proto");
-const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
-  keepCase: true,
-  longs: String,
-  enums: String,
-  defaults: true,
-  oneofs: true,
+dotenv.config({ path: "./.env" });
+
+process.on("uncaughtException", (err) => {
+  console.error("UNCAUGHT EXCEPTION! Apagando el servidor...");
+  console.error(err.name, err.message);
+  process.exit(1);
 });
-const userProto = grpc.loadPackageDefinition(packageDefinition).user;
 
-const server = new grpc.Server();
-server.addService(userProto.UserService.service, userController);
+if (!process.env.SERVER_URL || !process.env.GRPC_PORT) {
+  throw new Error("Faltan variables de entorno: SERVER_URL o GRPC_PORT.");
+}
 
 const PORT = process.env.GRPC_PORT || 50051;
 server.bindAsync(
-  `0.0.0.0:${PORT}`,
-  grpc.ServerCredentials.createInsecure(),
-  () => {
-    server.start();
-    console.log(`gRPC server running on port ${PORT}`);
+  `${process.env.SERVER_URL}:${PORT}`,
+  ServerCredentials.createInsecure(),
+  (error, port) => {
+    if (error) {
+      console.error("Error al iniciar el servidor:", error);
+    } else {
+      console.log(`gRPC server running on ${process.env.SERVER_URL}:${port}`);
+    }
   }
 );

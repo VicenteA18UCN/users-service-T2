@@ -93,7 +93,7 @@ const userService = {
           `Subject with ID ${subjectId} already exists in user progress`
         );
       }
-      return { userId, subjectId, version: 1, createdAt: new Date() };
+      return { userId, subjectId, createdAt: new Date() };
     });
 
     const progressToRemove = subjectsToRemove.filter((subjectId) => {

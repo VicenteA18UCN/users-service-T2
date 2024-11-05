@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package auth;
+
+service AuthService {
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+}
+
+message RegisterRequest {
+  string name = 1;
+  string firstLastName = 2;
+  string secondLastName = 3;
+  string rut = 4;
+  string email = 5;
+  int32 careerId = 6;
+  int32 roleId = 7;
+  string password = 8;
+  string confirmPassword = 9;
+}
+
+message RegisterResponse {
+  int32 id = 1;
+  string name = 2;
+  string firstLastName = 3;
+  string secondLastName = 4;
+  string rut = 5;
+  string email = 6;
+  int32 careerId = 7;
+  int32 roleId = 8;
+  bool isEnabled = 9;
+}

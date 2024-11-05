@@ -26,8 +26,6 @@ model User {
   roleId          Int
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
-  deletedAt       DateTime?
-  version         Int
   career          Career    @relation(fields: [careerId], references: [id])
   role            Role      @relation(fields: [roleId], references: [id])
   progress        UserProgress[]
@@ -39,8 +37,6 @@ model UserProgress {
   subjectId  Int
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
-  deletedAt  DateTime?
-  version    Int
   user       User      @relation(fields: [userId], references: [id])
   subject    Subject   @relation(fields: [subjectId], references: [id])
 }
@@ -52,8 +48,6 @@ model Role {
   description String
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-  deletedAt   DateTime?
-  version     Int
   users       User[]
 }
 
@@ -62,8 +56,6 @@ model Career {
   name      String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-  version   Int
   users     User[]
 }
 
@@ -76,7 +68,5 @@ model Subject {
   semester   Int
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
-  deletedAt  DateTime?
-  version    Int
   progress   UserProgress[]
 }
