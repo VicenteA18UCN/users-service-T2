@@ -5,6 +5,15 @@ import { hash } from "bcrypt";
 const prisma = new PrismaClient();
 
 async function main() {
+  // Limpia la base de datos eliminando todos los datos
+  await prisma.userProgress.deleteMany();
+  await prisma.user.deleteMany();
+  await prisma.role.deleteMany();
+  await prisma.career.deleteMany();
+  await prisma.subject.deleteMany();
+
+  console.log("Base de datos limpiada");
+
   // Datos para las carreras
   const careersData = [
     { name: "Ingeniería Civil", version: 1 },
@@ -60,10 +69,10 @@ async function main() {
     },
   ];
 
-  await Promise.all(
+  const users = await Promise.all(
     usersData.map(async (user) => {
       const hashedPassword = await hash(user.password, 10);
-      await prisma.user.create({
+      return prisma.user.create({
         data: {
           name: user.name,
           firstLastName: user.firstLastName,
@@ -101,7 +110,7 @@ async function main() {
     },
   ];
 
-  await Promise.all(
+  const subjects = await Promise.all(
     subjectsData.map((subject) =>
       prisma.subject.create({
         data: {
@@ -114,6 +123,28 @@ async function main() {
           version: subject.version,
         },
       })
+    )
+  );
+
+  // Datos para el progreso del usuario
+  const progressData = [
+    {
+      userId: users[0].id,
+      subjectId: subjects[0].id,
+      createdAt: new Date(),
+      version: 1,
+    },
+    {
+      userId: users[1].id,
+      subjectId: subjects[1].id,
+      createdAt: new Date(),
+      version: 1,
+    },
+  ];
+
+  await Promise.all(
+    progressData.map((progress) =>
+      prisma.userProgress.create({ data: progress })
     )
   );
 
