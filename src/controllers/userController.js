@@ -9,7 +9,7 @@ const userController = {
       callback(error);
     }
   },
-  async getProfile(call, callback) {
+  async profile(call, callback) {
     try {
       const user = await userService.getProfile(call.request.id);
       callback(null, user);

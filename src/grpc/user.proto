@@ -4,7 +4,7 @@ package user;
 
 service UserService {
   rpc GetAll (Empty) returns (UsersList);
-  rpc GetProfile (UserId) returns (User);
+  rpc Profile (UserId) returns (User);
   rpc UpdateProfile (UserProfile) returns (UserProfile);
   rpc GetProgress (UserId) returns (UserProgress);
   rpc UpdateProgress (UserProgressUpdate) returns (UserProgress);
@@ -24,7 +24,6 @@ message User {
   string secondLastName = 4;
   string email = 5;
   string rut = 6;
-  Career career = 7;
 }
 
 message UsersList {
@@ -42,8 +41,8 @@ message UserProfile {
   string firstLastName = 3;
   string secondLastName = 4;
   string email = 5;
-  int32 careerId = 6;
-  int32 roleId = 7;
+  string rut = 6;
+  Career career = 7;
 }
 
 message UserProgress {
