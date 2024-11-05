@@ -108,6 +108,30 @@ async function main() {
       semester: 1,
       version: 1,
     },
+    {
+      code: "CHE101",
+      name: "Química General",
+      department: "Química",
+      credits: 5,
+      semester: 1,
+      version: 1,
+    },
+    {
+      code: "BIO101",
+      name: "Biología General",
+      department: "Biología",
+      credits: 5,
+      semester: 1,
+      version: 1,
+    },
+    {
+      code: "CS101",
+      name: "Introducción a la Computación",
+      department: "Ciencias de la Computación",
+      credits: 6,
+      semester: 1,
+      version: 1,
+    },
   ];
 
   const subjects = await Promise.all(
@@ -135,8 +159,20 @@ async function main() {
       version: 1,
     },
     {
-      userId: users[1].id,
+      userId: users[0].id,
       subjectId: subjects[1].id,
+      createdAt: new Date(),
+      version: 1,
+    },
+    {
+      userId: users[1].id,
+      subjectId: subjects[2].id,
+      createdAt: new Date(),
+      version: 1,
+    },
+    {
+      userId: users[1].id,
+      subjectId: subjects[3].id,
       createdAt: new Date(),
       version: 1,
     },

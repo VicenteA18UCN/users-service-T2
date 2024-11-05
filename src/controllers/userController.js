@@ -35,6 +35,19 @@ const userController = {
       callback(error);
     }
   },
+  async updateProgress(call, callback) {
+    try {
+      const { userId, addSubjects, removeSubjects } = call.request;
+      const updatedProgress = await userService.updateProgress(
+        userId,
+        addSubjects,
+        removeSubjects
+      );
+      callback(null, { progress: updatedProgress });
+    } catch (error) {
+      callback(error);
+    }
+  },
 };
 
 export default userController;

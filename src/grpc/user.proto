@@ -7,6 +7,7 @@ service UserService {
   rpc Profile (UserId) returns (UserProfile);
   rpc UpdateProfile (UserUpdate) returns (UserUpdate);
   rpc GetProgress (UserId) returns (UserProgressList);
+  rpc UpdateProgress (ProgressUpdate) returns (UserProgressList);
 }
 
 message Empty {}
@@ -27,6 +28,12 @@ message User {
   string secondLastName = 4;
   string email = 5;
   string rut = 6;
+}
+
+message ProgressUpdate {
+  int32 userId = 1;
+  repeated string addSubjects = 2;   
+  repeated string removeSubjects = 3;
 }
 
 message UsersList {
