@@ -4,10 +4,8 @@ package user;
 
 service UserService {
   rpc GetAll (Empty) returns (UsersList);
-  rpc Profile (UserId) returns (User);
-  rpc UpdateProfile (UserProfile) returns (UserProfile);
-  rpc GetProgress (UserId) returns (UserProgress);
-  rpc UpdateProgress (UserProgressUpdate) returns (UserProgress);
+  rpc Profile (UserId) returns (UserProfile);
+  rpc UpdateProfile (UserUpdate) returns (UserUpdate);
 }
 
 message Empty {}
@@ -15,6 +13,10 @@ message Empty {}
 message Career {
   int32 id = 1;
   string name = 2;
+}
+
+message UserId {
+  int32 id = 1;
 }
 
 message User {
@@ -30,9 +32,11 @@ message UsersList {
   repeated User users = 1;
 }
 
-
-message UserId {
+message UserUpdate {
   int32 id = 1;
+  string name = 2;
+  string firstLastName = 3;
+  string secondLastName = 4;
 }
 
 message UserProfile {
@@ -45,22 +49,3 @@ message UserProfile {
   Career career = 7;
 }
 
-message UserProgress {
-  int32 userId = 1;
-  repeated Subject subjects = 2;
-}
-
-message Subject {
-  int32 id = 1;
-  string code = 2;
-  string name = 3;
-  string department = 4;
-  int32 credits = 5;
-  int32 semester = 6;
-}
-
-message UserProgressUpdate {
-  int32 userId = 1;
-  repeated int32 addSubjectIds = 2;
-  repeated int32 removeSubjectIds = 3;
-}

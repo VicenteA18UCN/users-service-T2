@@ -17,6 +17,14 @@ const userController = {
       callback(error);
     }
   },
+  async updateProfile(call, callback) {
+    try {
+      const user = await userService.updateProfile(call.request);
+      callback(null, user);
+    } catch (error) {
+      callback(error);
+    }
+  },
 };
 
 export default userController;
