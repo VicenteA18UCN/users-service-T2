@@ -42,10 +42,17 @@ const userService = {
       data: updateData,
     });
 
+    const updatedUserResponse = {
+      id: updatedUser.id,
+      name: updatedUser.name,
+      firstLastName: updatedUser.firstLastName,
+      secondLastName: updatedUser.secondLastName,
+    };
+
     const channel = getChannel();
     channel.sendToQueue(
       "user-update-queue",
-      Buffer.from(JSON.stringify(updatedUser)),
+      Buffer.from(JSON.stringify(updatedUserResponse)),
       {
         persistent: true,
       }

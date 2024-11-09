@@ -18,8 +18,6 @@ const authService = {
       confirmPassword,
     } = data;
 
-    console.log(data);
-
     if (password !== confirmPassword) {
       throw new Error("Passwords do not match");
     }
@@ -79,10 +77,15 @@ const authService = {
       data: { hashedPassword: hashedNewPassword },
     });
 
+    const changePasswordResponse = {
+      id: updatedUser.id,
+      hashedNewPassword: updatedUser.hashedPassword,
+    };
+
     const channel = getChannel();
     channel.sendToQueue(
       "user-update-password-queue",
-      Buffer.from(JSON.stringify(updatedUser)),
+      Buffer.from(JSON.stringify(changePasswordResponse)),
       {
         persistent: true,
       }
