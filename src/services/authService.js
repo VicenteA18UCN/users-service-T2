@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
+import { getChannel } from "../utils/rabbitmq.js";
 
 const prisma = new PrismaClient();
 
@@ -70,10 +71,19 @@ const authService = {
 
     const hashedNewPassword = await bcrypt.hash(newPassword, 10);
 
-    await prisma.user.update({
+    const updatedUser = await prisma.user.update({
       where: { id: userId },
       data: { hashedPassword: hashedNewPassword },
     });
+
+    const channel = getChannel();
+    channel.sendToQueue(
+      "user-update-password-queue",
+      Buffer.from(JSON.stringify(updatedUser)),
+      {
+        persistent: true,
+      }
+    );
     return { message: "Password updated successfully" };
   },
 };
