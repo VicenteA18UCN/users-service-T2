@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { cleanObject } from "../utils/cleanObject.js";
+import { getChannel } from "../utils/rabbitmq.js";
 const prisma = new PrismaClient();
 
 const userService = {
@@ -40,6 +41,16 @@ const userService = {
       where: { id },
       data: updateData,
     });
+
+    const channel = getChannel();
+    channel.sendToQueue(
+      "user-update-queue",
+      Buffer.from(JSON.stringify(updatedUser)),
+      {
+        persistent: true,
+      }
+    );
+
     return updatedUser;
   },
 

@@ -8,7 +8,6 @@ const server = new Server();
 const userProto = loadProto("user");
 server.addService(userProto.UserService.service, userController);
 
-// Para futuros servicios, puedes descomentar y cargar el servicio de autenticación
 const authProto = loadProto("auth");
 server.addService(authProto.AuthService.service, authController);
 
