@@ -18,6 +18,8 @@ const authService = {
       confirmPassword,
     } = data;
 
+    console.log(data);
+
     if (password !== confirmPassword) {
       throw new Error("Passwords do not match");
     }
@@ -55,6 +57,7 @@ const authService = {
       rut: newUser.rut,
       email: newUser.email,
       careerId: careerId,
+      roleId: roleId,
       isEnabled: newUser.isEnabled,
       createdAt: newUser.createdAt.toISOString(),
     };

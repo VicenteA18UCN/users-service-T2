@@ -13,26 +13,26 @@ message RegisterRequest {
   string secondLastName = 3;
   string rut = 4;
   string email = 5;
-  int32 careerId = 6;
-  int32 roleId = 7;
+  string careerId = 6;
+  string roleId = 7;
   string password = 8;
   string confirmPassword = 9;
 }
 
 message RegisterResponse {
-  int32 id = 1;
+  string id = 1;
   string name = 2;
   string firstLastName = 3;
   string secondLastName = 4;
   string rut = 5;
   string email = 6;
-  int32 careerId = 7;
-  int32 roleId = 8;
+  string careerId = 7;
+  string roleId = 8;
   bool isEnabled = 9;
 }
 
 message UpdatePasswordRequest {
-  int32 userId = 1;
+  string userId = 1;
   string oldPassword = 2;
   string newPassword = 3;
 }

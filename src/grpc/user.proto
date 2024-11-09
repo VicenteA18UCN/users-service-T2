@@ -3,26 +3,26 @@ syntax = "proto3";
 package user;
 
 service UserService {
-  rpc GetAll (Empty) returns (UsersList);
-  rpc Profile (UserId) returns (UserProfile);
-  rpc UpdateProfile (UserUpdate) returns (UserUpdate);
-  rpc GetProgress (UserId) returns (UserProgressList);
-  rpc UpdateProgress (ProgressUpdate) returns (UserProgressList);
+  rpc GetAll (EmptyRequest) returns (UserListResponse);
+  rpc Profile (UserIdRequest) returns (UserProfileResponse);
+  rpc UpdateProfile (UserUpdateRequest) returns (UserUpdateResponse);
+  rpc GetProgress (UserIdRequest) returns (UserProgressListResponse);
+  rpc UpdateProgress (UserProgressUpdateRequest) returns (UserProgressListResponse);
 }
 
-message Empty {}
+message EmptyRequest {}
 
-message Career {
-  int32 id = 1;
+message CareerInfo {
+  string id = 1;
   string name = 2;
 }
 
-message UserId {
-  int32 id = 1;
+message UserIdRequest {
+  string id = 1;
 }
 
-message User {
-  int32 id = 1;
+message UserInfo {
+  string id = 1;
   string name = 2;
   string firstLastName = 3;
   string secondLastName = 4;
@@ -30,39 +30,45 @@ message User {
   string rut = 6;
 }
 
-message ProgressUpdate {
-  int32 userId = 1;
-  repeated string addSubjects = 2;   
+message UserProgressUpdateRequest {
+  string userId = 1;
+  repeated string addSubjects = 2;
   repeated string removeSubjects = 3;
 }
 
-message UsersList {
-  repeated User users = 1;
+message UserListResponse {
+  repeated UserInfo users = 1;
 }
 
 message UserProgressItem {
-  int32 id = 1;    
+  string id = 1;
   string code = 2;
 }
 
-message UserProgressList {
+message UserProgressListResponse {
   repeated UserProgressItem progress = 1;
 }
 
-message UserUpdate {
-  int32 id = 1;
+message UserUpdateRequest {
+  string id = 1;
   optional string name = 2;
   optional string firstLastName = 3;
   optional string secondLastName = 4;
 }
 
-message UserProfile {
-  int32 id = 1;
+message UserUpdateResponse {
+  string id = 1;
+  optional string name = 2;
+  optional string firstLastName = 3;
+  optional string secondLastName = 4;
+}
+
+message UserProfileResponse {
+  string id = 1;
   string name = 2;
   string firstLastName = 3;
   string secondLastName = 4;
   string email = 5;
   string rut = 6;
-  Career career = 7;
+  CareerInfo career = 7;
 }
-

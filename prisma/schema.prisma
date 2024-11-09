@@ -14,7 +14,7 @@ datasource db {
 }
 
 model User {
-  id              Int       @id @default(autoincrement())
+  id              String    @id @default(uuid())
   name            String
   firstLastName   String
   secondLastName  String
@@ -22,8 +22,8 @@ model User {
   email           String    @unique
   hashedPassword  String
   isEnabled       Boolean   @default(true)
-  careerId        Int
-  roleId          Int
+  careerId        String
+  roleId          String
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
   career          Career    @relation(fields: [careerId], references: [id])
@@ -32,18 +32,17 @@ model User {
 }
 
 model UserProgress {
-  id         Int       @id @default(autoincrement())
-  userId     Int
-  subjectId  Int
+  id         String    @id @default(uuid())
+  userId     String
+  subjectId  String
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
   user       User      @relation(fields: [userId], references: [id])
   subject    Subject   @relation(fields: [subjectId], references: [id])
 }
 
-
 model Role {
-  id          Int       @id @default(autoincrement())
+  id          String    @id @default(uuid())
   name        String
   description String
   createdAt   DateTime  @default(now())
@@ -52,7 +51,7 @@ model Role {
 }
 
 model Career {
-  id        Int       @id @default(autoincrement())
+  id        String    @id @default(uuid())
   name      String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
@@ -60,7 +59,7 @@ model Career {
 }
 
 model Subject {
-  id         Int       @id @default(autoincrement())
+  id         String    @id @default(uuid())
   code       String
   name       String
   department String
