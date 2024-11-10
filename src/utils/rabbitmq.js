@@ -8,8 +8,8 @@ export async function connectRabbitMQ() {
       process.env.RABBITMQ_URL || "amqp://localhost"
     );
     channel = await connection.createChannel();
-    await channel.assertQueue("user-update-queue", { durable: true });
-    console.log("Connected to RabbitMQ and queue 'user-update-queue' created");
+    await channel.assertQueue("user-create-queue", { durable: true });
+    console.log("Connected to RabbitMQ and queue 'user-create-queue' created");
     await channel.assertQueue("user-update-password-queue", { durable: true });
     console.log(
       "Connected to RabbitMQ and queue 'user-update-password-queue' created"

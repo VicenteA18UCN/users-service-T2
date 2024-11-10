@@ -47,6 +47,22 @@ const authService = {
       },
     });
 
+    const creationUserResponse = {
+      id: newUser.id,
+      email: newUser.email,
+      password: hashedPassword,
+      roleId: roleId,
+    };
+
+    const channel = getChannel();
+    channel.sendToQueue(
+      "user-create-queue",
+      Buffer.from(JSON.stringify(creationUserResponse)),
+      {
+        persistent: true,
+      }
+    );
+
     return {
       id: newUser.id,
       name: newUser.name,
