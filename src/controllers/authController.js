@@ -44,7 +44,7 @@ const authController = {
       callback(null, response);
     } catch (error) {
       callback({
-        code: grpc.status.INVALID_ARGUMENT,
+        code: 400,
         message: error.message,
       });
     }
