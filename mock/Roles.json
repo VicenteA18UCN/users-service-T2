@@ -1,0 +1,27 @@
+[
+  {
+    "id": "e5899aa9-67e8-4b63-be3b-54c72f3ee7fc",
+    "name": "Construction Worker",
+    "description": "vestibulum ante ipsum primis in faucibus orci"
+  },
+  {
+    "id": "8a23a143-8aa8-4937-adac-a515a7c31ed3",
+    "name": "Project Manager",
+    "description": "est donec odio justo sollicitudin ut suscipit a feugiat et"
+  },
+  {
+    "id": "267a6c2c-ee1a-4e2b-aa7c-930ed99a5722",
+    "name": "Architect",
+    "description": "ultrices posuere cubilia curae donec"
+  },
+  {
+    "id": "deba7085-b616-43ae-97b1-686e1dae90ed",
+    "name": "Construction Expeditor",
+    "description": "neque duis bibendum morbi non quam nec dui luctus"
+  },
+  {
+    "id": "5eac8bd7-d9af-4a51-a30c-184f769ee1ec",
+    "name": "Construction Manager",
+    "description": "vulputate ut ultrices vel augue"
+  }
+]

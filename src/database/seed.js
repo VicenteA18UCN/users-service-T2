@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { PrismaClient } from "@prisma/client";
 import { hash } from "bcrypt";
+import fs from "fs/promises";
 
 const prisma = new PrismaClient();
 
@@ -14,162 +15,113 @@ async function main() {
 
   console.log("Base de datos limpiada");
 
-  // Datos para las carreras
-  const careersData = [
-    { name: "Ingeniería Civil" },
-    { name: "Ingeniería en Computación" },
-    { name: "Ingeniería Industrial" },
-  ];
+  const dataCareers = await fs.readFile("./mock/Careers.json", "utf-8");
+  const careers = JSON.parse(dataCareers);
+  const cleanedCareers = careers.map((career) => ({
+    id: career.id,
+    name: career.name,
+  }));
 
-  const careers = await Promise.all(
-    careersData.map((career) => prisma.career.create({ data: career }))
+  await Promise.all(
+    cleanedCareers.map((career) =>
+      prisma.career.create({ data: { ...career } })
+    )
   );
 
-  // Datos para los roles
-  const rolesData = [
-    {
-      name: "Admin",
-      description: "Administrador con acceso completo",
-    },
-    {
-      name: "User",
-      description: "Usuario regular con acceso limitado",
-    },
-  ];
-
-  const [roleAdmin, roleUser] = await Promise.all(
-    rolesData.map((role) => prisma.role.create({ data: role }))
-  );
-
-  // Lista de usuarios
-  const usersData = [
-    {
-      name: "Admin",
-      firstLastName: "Perez",
-      secondLastName: "Gomez",
-      rut: "11111111-1",
-      email: "admin@example.com",
-      password: "a",
-      careerId: careers[0].id,
-      roleId: roleAdmin.id,
-    },
-    {
-      name: "User",
-      firstLastName: "Lopez",
-      secondLastName: "Martinez",
-      rut: "22222222-2",
-      email: "user@example.com",
-      password: "a",
-      careerId: careers[1].id,
-      roleId: roleUser.id,
-    },
-  ];
-
-  const users = await Promise.all(
-    usersData.map(async (user) => {
-      const hashedPassword = await hash(user.password, 10);
-      return prisma.user.create({
+  const dataRoles = await fs.readFile("./mock/Roles.json", "utf-8");
+  const roles = JSON.parse(dataRoles);
+  const cleanedRoles = roles.map((rol) => ({
+    id: rol.id,
+    name: rol.name,
+    description: rol.description,
+  }));
+  await Promise.all(
+    cleanedRoles.map((role) =>
+      prisma.role.create({
         data: {
-          name: user.name,
-          firstLastName: user.firstLastName,
-          secondLastName: user.secondLastName,
-          rut: user.rut,
-          email: user.email,
-          hashedPassword,
-          careerId: user.careerId,
-          roleId: user.roleId,
-          isEnabled: true,
-          createdAt: new Date(),
-        },
-      });
-    })
-  );
-
-  // Datos para las asignaturas
-  const subjectsData = [
-    {
-      code: "MAT101",
-      name: "Matemáticas I",
-      department: "Matemáticas",
-      credits: 6,
-      semester: 1,
-    },
-    {
-      code: "PHY101",
-      name: "Física I",
-      department: "Física",
-      credits: 6,
-      semester: 1,
-    },
-    {
-      code: "CHE101",
-      name: "Química General",
-      department: "Química",
-      credits: 5,
-      semester: 1,
-    },
-    {
-      code: "BIO101",
-      name: "Biología General",
-      department: "Biología",
-      credits: 5,
-      semester: 1,
-    },
-    {
-      code: "CS101",
-      name: "Introducción a la Computación",
-      department: "Ciencias de la Computación",
-      credits: 6,
-      semester: 1,
-    },
-  ];
-
-  const subjects = await Promise.all(
-    subjectsData.map((subject) =>
-      prisma.subject.create({
-        data: {
-          code: subject.code,
-          name: subject.name,
-          department: subject.department,
-          credits: subject.credits,
-          semester: subject.semester,
-          createdAt: new Date(),
+          ...role,
         },
       })
     )
   );
 
-  // Datos para el progreso del usuario
-  const progressData = [
-    {
-      userId: users[0].id,
-      subjectId: subjects[0].id,
-      createdAt: new Date(),
-    },
-    {
-      userId: users[0].id,
-      subjectId: subjects[1].id,
-      createdAt: new Date(),
-    },
-    {
-      userId: users[1].id,
-      subjectId: subjects[2].id,
-      createdAt: new Date(),
-    },
-    {
-      userId: users[1].id,
-      subjectId: subjects[3].id,
-      createdAt: new Date(),
-    },
-  ];
+  const dataUsers = await fs.readFile("./mock/Users.json", "utf-8");
+  const users = JSON.parse(dataUsers);
+  const cleanedUsers = users.map((user) => ({
+    id: user.id,
+    name: user.name,
+    firstLastName: user.firstLastName,
+    secondLastName: user.secondLastName,
+    rut: user.rut,
+    email: user.email,
+    hashedPassword: user.hashedPassword,
+    careerId: user.careerId,
+    roleId: user.roleId,
+  }));
 
   await Promise.all(
-    progressData.map((progress) =>
-      prisma.userProgress.create({ data: progress })
+    cleanedUsers.map(async (user) => {
+      return prisma.user.create({
+        data: {
+          ...user,
+        },
+      });
+    })
+  );
+
+  const subjectsData = await fs.readFile("./mock/Subjects.json", "utf-8");
+  const subjects = JSON.parse(subjectsData);
+  const cleanedSubjects = subjects.map((subject) => ({
+    id: subject.id,
+    code: subject.code,
+    name: subject.name,
+    department: subject.department,
+    credits: subject.credits,
+    semester: subject.semester,
+  }));
+
+  await Promise.all(
+    cleanedSubjects.map((subject) =>
+      prisma.subject.create({
+        data: {
+          ...subject,
+        },
+      })
     )
   );
 
-  console.log("Datos de seed creados exitosamente");
+  const progressData = await fs.readFile("./mock/UserProgress.json", "utf-8");
+
+  const progress = JSON.parse(progressData);
+  const cleanedProgress = progress.map((progress) => ({
+    id: progress.id,
+    userId: progress.userId,
+    subjectId: progress.subjectId,
+  }));
+
+  await Promise.all(
+    cleanedProgress.map(async (progress) => {
+      const userExists = await prisma.user.findUnique({
+        where: { id: progress.userId },
+      });
+
+      const subjectExists = await prisma.subject.findUnique({
+        where: { id: progress.subjectId },
+      });
+
+      if (!userExists) {
+        console.error(`User with ID ${progress.userId} does not exist.`);
+        return;
+      }
+
+      if (!subjectExists) {
+        console.error(`Subject with ID ${progress.subjectId} does not exist.`);
+        return;
+      }
+
+      await prisma.userProgress.create({ data: { ...progress } });
+    })
+  );
 }
 
 main()

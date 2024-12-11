@@ -1,0 +1,27 @@
+[
+  {
+    "id": "c0744efc-0156-4a86-bee7-040826ec0724",
+    "name": "Computer Systems Analyst II"
+  },
+  { "id": "ab260a99-fa31-4305-92b7-6f4224c7a22b", "name": "Teacher" },
+  { "id": "3da2bdef-f41b-4bfb-92d0-0f17b4be2a3d", "name": "Engineer II" },
+  {
+    "id": "cb51250d-e182-4257-96c6-6ade63fde8cd",
+    "name": "Assistant Media Planner"
+  },
+  { "id": "f963cd07-b337-4137-97d2-0547efcb3692", "name": "Teacher" },
+  {
+    "id": "d50d52cf-debd-44cb-b5e6-6a891c82ad43",
+    "name": "Chief Design Engineer"
+  },
+  {
+    "id": "64515864-1a5b-45f4-b71c-9a2043e912c8",
+    "name": "Electrical Engineer"
+  },
+  {
+    "id": "ccdada2a-f50b-4742-8911-be3019610816",
+    "name": "Administrative Assistant II"
+  },
+  { "id": "8ac2ddbd-4689-4ef5-afe3-d20857bef613", "name": "Legal Assistant" },
+  { "id": "1f15aa9f-df53-4a2c-ad11-fb3d84cadd01", "name": "Staff Scientist" }
+]

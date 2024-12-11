@@ -1,0 +1,402 @@
+[
+  {
+    "id": "fb5cb8f6-5b43-4f33-8159-a16eca90f40a",
+    "code": "60949-160",
+    "name": "Framing (Steel)",
+    "department": "SGOCO Group, Ltd",
+    "credits": 60,
+    "semester": 8
+  },
+  {
+    "id": "7e5bc12a-0a81-4d60-81a2-cf28f082f9c5",
+    "code": "0268-6710",
+    "name": "Sitework & Site Utilities",
+    "department": "Knoll, Inc.",
+    "credits": 69,
+    "semester": 10
+  },
+  {
+    "id": "d4c332ab-05d4-4daa-ac15-4c1f57964e42",
+    "code": "0456-2280",
+    "name": "Epoxy Flooring",
+    "department": "Wynn Resorts, Limited",
+    "credits": 17,
+    "semester": 6
+  },
+  {
+    "id": "d80f3051-ed5d-440f-95eb-cd76398bb606",
+    "code": "50988-212",
+    "name": "Ornamental Railings",
+    "department": "First Potomac Realty Trust",
+    "credits": 79,
+    "semester": 7
+  },
+  {
+    "id": "0c31da75-341a-4dd1-8572-2fa5da4d8e82",
+    "code": "46007-203",
+    "name": "Soft Flooring and Base",
+    "department": "InVivo Therapeutics Holdings Corp.",
+    "credits": 54,
+    "semester": 3
+  },
+  {
+    "id": "ab410cc6-9ab9-43aa-a6e2-3bcd5575580f",
+    "code": "0409-1176",
+    "name": "Site Furnishings",
+    "department": "Vera Bradley, Inc.",
+    "credits": 11,
+    "semester": 4
+  },
+  {
+    "id": "27461df7-5f3c-4118-b5b5-0b93b8950e0a",
+    "code": "52007-240",
+    "name": "Structural and Misc Steel (Fabrication)",
+    "department": "Calumet Specialty Products Partners, L.P.",
+    "credits": 3,
+    "semester": 7
+  },
+  {
+    "id": "595d04d3-ddb6-4842-8247-431789f72ef2",
+    "code": "35000-835",
+    "name": "HVAC",
+    "department": "Origo Acquisition Corporation",
+    "credits": 68,
+    "semester": 3
+  },
+  {
+    "id": "f33c2e18-619e-4e5a-81cd-75d92271a6ce",
+    "code": "60637-005",
+    "name": "Exterior Signage",
+    "department": "Broadwind Energy, Inc.",
+    "credits": 76,
+    "semester": 3
+  },
+  {
+    "id": "ec2f139e-0d33-44eb-946b-eb4aec76266e",
+    "code": "63981-560",
+    "name": "Termite Control",
+    "department": "Dave & Buster's Entertainment, Inc.",
+    "credits": 54,
+    "semester": 6
+  },
+  {
+    "id": "46e60ef9-e68a-40f9-9f9f-8a4aa71425f5",
+    "code": "66467-3730",
+    "name": "Painting & Vinyl Wall Covering",
+    "department": "Amarin Corporation plc",
+    "credits": 20,
+    "semester": 2
+  },
+  {
+    "id": "41642090-c809-4ad2-ad7e-7743b6e532c1",
+    "code": "0378-0477",
+    "name": "Retaining Wall and Brick Pavers",
+    "department": "Eaton Vance Municipal Income 2028 Term Trust",
+    "credits": 6,
+    "semester": 3
+  },
+  {
+    "id": "6ae8e10d-8c1a-46ff-b1c2-2712bdf1e13f",
+    "code": "36800-620",
+    "name": "Epoxy Flooring",
+    "department": "Eagle Point Credit Company Inc.",
+    "credits": 2,
+    "semester": 6
+  },
+  {
+    "id": "174e73f5-7449-4f59-8255-1682bb4ce1cc",
+    "code": "75933-1425",
+    "name": "Drywall & Acoustical (MOB)",
+    "department": "Universal Health Realty Income Trust",
+    "credits": 51,
+    "semester": 10
+  },
+  {
+    "id": "204d9a76-c9d9-4fb4-aa9c-05ad578d44cb",
+    "code": "58552-317",
+    "name": "Casework",
+    "department": "Steel Dynamics, Inc.",
+    "credits": 18,
+    "semester": 2
+  },
+  {
+    "id": "7e4c89bc-fd2b-4eed-ac4e-550ea5adcc76",
+    "code": "0074-7069",
+    "name": "Wall Protection",
+    "department": "Kayne Anderson MLP Investment Company",
+    "credits": 78,
+    "semester": 2
+  },
+  {
+    "id": "337c65ed-9cba-4036-9cd4-267ecc438bfa",
+    "code": "60505-0157",
+    "name": "Ornamental Railings",
+    "department": "ONEOK Partners, L.P.",
+    "credits": 25,
+    "semester": 10
+  },
+  {
+    "id": "6795228f-b1a4-4d93-a450-40fb9192ef7d",
+    "code": "68016-527",
+    "name": "Fire Sprinkler System",
+    "department": "BlackRock California Municipal Income Trust",
+    "credits": 28,
+    "semester": 1
+  },
+  {
+    "id": "111a5b05-46c1-4f13-9201-ae291ecf0e96",
+    "code": "63629-1531",
+    "name": "Curb & Gutter",
+    "department": "Valvoline Inc.",
+    "credits": 61,
+    "semester": 4
+  },
+  {
+    "id": "23fe0a28-cc52-44d1-a030-78927c52e4d1",
+    "code": "0085-0492",
+    "name": "Fire Sprinkler System",
+    "department": "First Financial Corporation Indiana",
+    "credits": 9,
+    "semester": 8
+  },
+  {
+    "id": "54061dd6-6546-4693-8e12-b07bfe8094fe",
+    "code": "50436-3135",
+    "name": "Glass & Glazing",
+    "department": "Waste Management, Inc.",
+    "credits": 89,
+    "semester": 5
+  },
+  {
+    "id": "27e1433f-4df1-4837-8e49-d08685028e02",
+    "code": "16590-118",
+    "name": "Termite Control",
+    "department": "Cedar Fair, L.P.",
+    "credits": 92,
+    "semester": 4
+  },
+  {
+    "id": "c98826f8-df44-40f4-9f38-bc87b94b67d2",
+    "code": "57237-048",
+    "name": "Exterior Signage",
+    "department": "Fair Isaac Corporation",
+    "credits": 92,
+    "semester": 4
+  },
+  {
+    "id": "3c4d168f-d035-4f21-9347-a0d5ffc4f3e9",
+    "code": "0268-0627",
+    "name": "Elevator",
+    "department": "Synchrony Financial",
+    "credits": 98,
+    "semester": 9
+  },
+  {
+    "id": "4dd94d6b-b85e-4cd8-a915-e8a8671f341f",
+    "code": "55154-0688",
+    "name": "Roofing (Metal)",
+    "department": "iShares S&P Global Timber & Forestry Index Fund",
+    "credits": 10,
+    "semester": 9
+  },
+  {
+    "id": "d32be829-1761-47a7-b0c9-8eab4501e2a0",
+    "code": "49349-790",
+    "name": "Waterproofing & Caulking",
+    "department": "ITUS Corporation",
+    "credits": 47,
+    "semester": 5
+  },
+  {
+    "id": "c05ff4a2-6285-4203-9e25-0d1857959be9",
+    "code": "58318-002",
+    "name": "Electrical and Fire Alarm",
+    "department": "eHealth, Inc.",
+    "credits": 35,
+    "semester": 1
+  },
+  {
+    "id": "f451dd22-3b09-4494-a309-d13a40126c6b",
+    "code": "15127-004",
+    "name": "Termite Control",
+    "department": "Flotek Industries, Inc.",
+    "credits": 74,
+    "semester": 4
+  },
+  {
+    "id": "e1f9cbcc-da10-45b8-875c-f03c346508d3",
+    "code": "48951-8156",
+    "name": "Framing (Steel)",
+    "department": "Stage Stores, Inc.",
+    "credits": 22,
+    "semester": 6
+  },
+  {
+    "id": "d6f1b352-b668-430a-b094-839f6552fcb2",
+    "code": "37205-345",
+    "name": "Casework",
+    "department": "iPath US Treasury 2-year Bull ETN",
+    "credits": 54,
+    "semester": 1
+  },
+  {
+    "id": "458691be-d568-40d7-8c28-3edf81b184f2",
+    "code": "49401-104",
+    "name": "Glass & Glazing",
+    "department": "Union Pacific Corporation",
+    "credits": 70,
+    "semester": 1
+  },
+  {
+    "id": "b5182f92-ac44-4832-a6e0-edf8df351985",
+    "code": "0338-0669",
+    "name": "Glass & Glazing",
+    "department": "Pimco Municipal Income Fund II",
+    "credits": 45,
+    "semester": 4
+  },
+  {
+    "id": "7493214f-8526-4d0c-8d95-ad9382248626",
+    "code": "0093-2277",
+    "name": "Termite Control",
+    "department": "AMN Healthcare Services Inc",
+    "credits": 76,
+    "semester": 7
+  },
+  {
+    "id": "1a784ebc-5ae1-40ff-afca-9cd36c27a857",
+    "code": "52959-534",
+    "name": "Epoxy Flooring",
+    "department": "Niagara Mohawk Holdings, Inc.",
+    "credits": 56,
+    "semester": 7
+  },
+  {
+    "id": "16e56630-dfb9-46a6-83e6-3da4811cc57e",
+    "code": "43063-382",
+    "name": "Electrical and Fire Alarm",
+    "department": "Orbotech Ltd.",
+    "credits": 84,
+    "semester": 5
+  },
+  {
+    "id": "2cf7ae0d-3470-46cc-8d9d-8869bfb4e485",
+    "code": "36987-2469",
+    "name": "Hard Tile & Stone",
+    "department": "Jacobs Engineering Group Inc.",
+    "credits": 61,
+    "semester": 9
+  },
+  {
+    "id": "0148565f-e7a9-404d-aefe-72b88d5f2422",
+    "code": "0093-0784",
+    "name": "Electrical and Fire Alarm",
+    "department": "Western Union Company (The)",
+    "credits": 56,
+    "semester": 2
+  },
+  {
+    "id": "fe80ddc2-c670-4ec6-8cf3-a7fc7fc34333",
+    "code": "0054-8595",
+    "name": "Roofing (Asphalt)",
+    "department": "Cintas Corporation",
+    "credits": 6,
+    "semester": 1
+  },
+  {
+    "id": "045ea8a6-c618-4a43-94b6-0e487c2b20e0",
+    "code": "43742-0057",
+    "name": "Fire Sprinkler System",
+    "department": "Carvana Co.",
+    "credits": 72,
+    "semester": 9
+  },
+  {
+    "id": "4f9c9d39-993f-4a78-869c-7d7e0f1336e3",
+    "code": "62211-338",
+    "name": "Glass & Glazing",
+    "department": "Depomed, Inc.",
+    "credits": 64,
+    "semester": 2
+  },
+  {
+    "id": "33834c22-52b7-414e-a5a8-6d2f33b06c0a",
+    "code": "59779-138",
+    "name": "Ornamental Railings",
+    "department": "Bank of the Ozarks",
+    "credits": 86,
+    "semester": 8
+  },
+  {
+    "id": "e4bbad5f-614e-4652-869b-1a4a15b911ff",
+    "code": "11584-0029",
+    "name": "Prefabricated Aluminum Metal Canopies",
+    "department": "Cohen & Steers Limited Duration Preferred and Income Fund, Inc",
+    "credits": 72,
+    "semester": 10
+  },
+  {
+    "id": "36a716c3-075d-4d12-984d-63621a8cf166",
+    "code": "67457-196",
+    "name": "Roofing (Asphalt)",
+    "department": "Enzymotec Ltd.",
+    "credits": 50,
+    "semester": 1
+  },
+  {
+    "id": "2728c787-5a19-450c-8d84-e36f947292ea",
+    "code": "0615-6577",
+    "name": "Roofing (Asphalt)",
+    "department": "State Auto Financial Corporation",
+    "credits": 96,
+    "semester": 10
+  },
+  {
+    "id": "50423e22-951f-4ea9-95ce-9905a9ef65c3",
+    "code": "41250-027",
+    "name": "Glass & Glazing",
+    "department": "AXT Inc",
+    "credits": 94,
+    "semester": 9
+  },
+  {
+    "id": "2a0e1a2d-4bde-4d3a-95a5-c721e1258479",
+    "code": "50436-3594",
+    "name": "Framing (Steel)",
+    "department": "Select Comfort Corporation",
+    "credits": 61,
+    "semester": 2
+  },
+  {
+    "id": "a5966742-8e85-4d14-a59e-df60af2a61c8",
+    "code": "54868-5781",
+    "name": "HVAC",
+    "department": "Pacific Coast Oil Trust",
+    "credits": 76,
+    "semester": 10
+  },
+  {
+    "id": "5ba061c2-da2c-4561-9082-37a44e477598",
+    "code": "0273-7003",
+    "name": "Overhead Doors",
+    "department": "Transocean Ltd.",
+    "credits": 70,
+    "semester": 3
+  },
+  {
+    "id": "847f549d-5393-407c-aac7-bd5f1339c74c",
+    "code": "13537-458",
+    "name": "Marlite Panels (FED)",
+    "department": "Bancorp 34, Inc.",
+    "credits": 22,
+    "semester": 4
+  },
+  {
+    "id": "a38bf1a4-0136-4ad9-b9db-416252238baf",
+    "code": "64997-152",
+    "name": "Ornamental Railings",
+    "department": "Flaherty & Crumrine Preferred Income Opportunity Fund Inc",
+    "credits": 83,
+    "semester": 8
+  }
+]
