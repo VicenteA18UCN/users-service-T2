@@ -13,7 +13,6 @@ const authService = {
       rut,
       email,
       careerId,
-      roleId,
       password,
       confirmPassword,
     } = data;
@@ -21,6 +20,18 @@ const authService = {
     if (password !== confirmPassword) {
       throw new Error("Passwords do not match");
     }
+
+    const role = await prisma.role.findFirst({
+      where: { name: "Supervisor" },
+    });
+
+    if (!role) throw new Error("Role not found");
+
+    const carrer = await prisma.career.findUnique({
+      where: { id: careerId },
+    });
+
+    if (!carrer) throw new Error("Career not found");
 
     const existingUser = await prisma.user.findUnique({
       where: { email },
@@ -41,7 +52,7 @@ const authService = {
           connect: { id: careerId },
         },
         role: {
-          connect: { id: roleId },
+          connect: { id: role.id },
         },
         isEnabled: true,
       },
@@ -51,7 +62,7 @@ const authService = {
       id: newUser.id,
       email: newUser.email,
       password: hashedPassword,
-      roleId: roleId,
+      roleId: role.id,
     };
 
     const channel = getChannel();
@@ -71,7 +82,7 @@ const authService = {
       rut: newUser.rut,
       email: newUser.email,
       careerId: careerId,
-      roleId: roleId,
+      roleId: role.id,
       isEnabled: newUser.isEnabled,
       createdAt: newUser.createdAt.toISOString(),
     };

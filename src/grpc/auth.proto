@@ -14,9 +14,8 @@ message RegisterRequest {
   string rut = 4;
   string email = 5;
   string careerId = 6;
-  string roleId = 7;
-  string password = 8;
-  string confirmPassword = 9;
+  string password = 7;
+  string confirmPassword = 8;
 }
 
 message RegisterResponse {

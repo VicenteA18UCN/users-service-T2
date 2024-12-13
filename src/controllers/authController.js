@@ -10,7 +10,6 @@ const authController = {
         rut,
         email,
         careerId,
-        roleId,
         password,
         confirmPassword,
       } = call.request;
@@ -21,7 +20,6 @@ const authController = {
         rut,
         email,
         careerId,
-        roleId,
         password,
         confirmPassword,
       });

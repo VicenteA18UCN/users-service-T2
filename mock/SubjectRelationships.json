@@ -1,252 +1,50 @@
-[
-  {
-    "id": "9017ca23-dd1e-4a6c-ad1b-3fab8c9a7c50",
-    "subjectCode": "13537-458",
-    "preSubjectCode": "0093-2277"
-  },
-  {
-    "id": "732033e1-a6d7-4023-bb5b-7680fce288ba",
-    "subjectCode": "68016-527",
-    "preSubjectCode": "0409-1176"
-  },
-  {
-    "id": "0a1c278a-db3a-4d0c-a42b-5adc785df991",
-    "subjectCode": "0268-0627",
-    "preSubjectCode": "48951-8156"
-  },
-  {
-    "id": "e223f80c-6f86-426c-917d-e66454c2c2d3",
-    "subjectCode": "13537-458",
-    "preSubjectCode": "68016-527"
-  },
-  {
-    "id": "30655175-f9f1-4377-9699-eeec139e006f",
-    "subjectCode": "54868-5781",
-    "preSubjectCode": "52007-240"
-  },
-  {
-    "id": "5110a6cb-9fe0-423f-a26e-5f389e0946ab",
-    "subjectCode": "37205-345",
-    "preSubjectCode": "0268-6710"
-  },
-  {
-    "id": "405131f5-b45a-4db6-b623-a35c329cdf51",
-    "subjectCode": "0456-2280",
-    "preSubjectCode": "50988-212"
-  },
-  {
-    "id": "3ec6244c-1db0-404a-a49c-0a050f5c76e1",
-    "subjectCode": "0615-6577",
-    "preSubjectCode": "0615-6577"
-  },
-  {
-    "id": "ba52ae5e-5aec-4335-837d-1e548cdeb261",
-    "subjectCode": "62211-338",
-    "preSubjectCode": "41250-027"
-  },
-  {
-    "id": "97320355-58de-4d32-a921-27d74e536af3",
-    "subjectCode": "50988-212",
-    "preSubjectCode": "0409-1176"
-  },
-  {
-    "id": "632538c9-fe62-41b0-970d-3611db2bc031",
-    "subjectCode": "50436-3594",
-    "preSubjectCode": "60505-0157"
-  },
-  {
-    "id": "66d78f5c-93b1-4c1b-829a-802192c045a1",
-    "subjectCode": "54868-5781",
-    "preSubjectCode": "48951-8156"
-  },
-  {
-    "id": "677f82d5-b2bf-4c9e-b1cd-1aec73ff80d5",
-    "subjectCode": "58318-002",
-    "preSubjectCode": "46007-203"
-  },
-  {
-    "id": "e776912d-9694-4ce7-9b05-41c543e8ca22",
-    "subjectCode": "50436-3594",
-    "preSubjectCode": "35000-835"
-  },
-  {
-    "id": "7cd96f62-c861-4d6c-ba9a-6686bf7875cc",
-    "subjectCode": "50988-212",
-    "preSubjectCode": "58318-002"
-  },
-  {
-    "id": "969616db-41ac-458a-97e4-05d7947be5e4",
-    "subjectCode": "36987-2469",
-    "preSubjectCode": "67457-196"
-  },
-  {
-    "id": "6e4af923-7a0e-4c59-b707-de4ae2ca13a9",
-    "subjectCode": "60637-005",
-    "preSubjectCode": "37205-345"
-  },
-  {
-    "id": "2d1cab9c-a3a5-4b0a-8e26-9239207dc7af",
-    "subjectCode": "52007-240",
-    "preSubjectCode": "43063-382"
-  },
-  {
-    "id": "b6a1421a-7a5b-4e14-a612-0d07bed61dbc",
-    "subjectCode": "63981-560",
-    "preSubjectCode": "0456-2280"
-  },
-  {
-    "id": "17d8eeab-f4dd-408e-9691-c673273853e9",
-    "subjectCode": "49401-104",
-    "preSubjectCode": "60637-005"
-  },
-  {
-    "id": "090ba9e3-1946-4231-a495-e089d6769b36",
-    "subjectCode": "60505-0157",
-    "preSubjectCode": "37205-345"
-  },
-  {
-    "id": "be55d8d1-9d40-418e-b7ed-74950f2382b6",
-    "subjectCode": "16590-118",
-    "preSubjectCode": "60505-0157"
-  },
-  {
-    "id": "f256a790-e5af-48d5-aeb2-75d927a49c6f",
-    "subjectCode": "66467-3730",
-    "preSubjectCode": "64997-152"
-  },
-  {
-    "id": "f2d71475-e0a7-47f8-9339-eed6b3dcb8a6",
-    "subjectCode": "0378-0477",
-    "preSubjectCode": "52959-534"
-  },
-  {
-    "id": "054c0eb4-c5ff-4bd9-999c-e96f34458a74",
-    "subjectCode": "35000-835",
-    "preSubjectCode": "64997-152"
-  },
-  {
-    "id": "76f38a7b-cfd4-4dea-8879-d31f5741bcdd",
-    "subjectCode": "16590-118",
-    "preSubjectCode": "16590-118"
-  },
-  {
-    "id": "67667d9d-0db6-4c2d-9cf0-4acc030b1a0a",
-    "subjectCode": "37205-345",
-    "preSubjectCode": "60949-160"
-  },
-  {
-    "id": "40d0f77d-6c7a-4fa8-a1ad-291a0f4a0b73",
-    "subjectCode": "52959-534",
-    "preSubjectCode": "59779-138"
-  },
-  {
-    "id": "bde74d41-4751-4651-9106-8c8965f0198e",
-    "subjectCode": "37205-345",
-    "preSubjectCode": "0054-8595"
-  },
-  {
-    "id": "6cf3f24f-14d8-4316-9506-ff408639a267",
-    "subjectCode": "43742-0057",
-    "preSubjectCode": "0338-0669"
-  },
-  {
-    "id": "957b02b3-6081-43fc-88d3-ee72e65c4d8a",
-    "subjectCode": "63629-1531",
-    "preSubjectCode": "64997-152"
-  },
-  {
-    "id": "83db7881-4c2d-46d6-9e41-3b1ff04e4e38",
-    "subjectCode": "55154-0688",
-    "preSubjectCode": "48951-8156"
-  },
-  {
-    "id": "7d618a34-7024-4e41-9bc0-db3e4dcbd0f9",
-    "subjectCode": "11584-0029",
-    "preSubjectCode": "0409-1176"
-  },
-  {
-    "id": "88173358-8c15-4b63-9987-43367d24f54b",
-    "subjectCode": "68016-527",
-    "preSubjectCode": "52007-240"
-  },
-  {
-    "id": "f11c2dcf-0201-4fbe-a8f6-3646aad26201",
-    "subjectCode": "57237-048",
-    "preSubjectCode": "0338-0669"
-  },
-  {
-    "id": "a209b420-edcc-4d6c-87c1-a980d7ea776e",
-    "subjectCode": "62211-338",
-    "preSubjectCode": "36800-620"
-  },
-  {
-    "id": "5f3648d7-f891-423d-bba4-099b45ee53da",
-    "subjectCode": "0074-7069",
-    "preSubjectCode": "41250-027"
-  },
-  {
-    "id": "1cdb7240-1acc-4273-bbe4-e0d4b9331cfe",
-    "subjectCode": "50436-3135",
-    "preSubjectCode": "0273-7003"
-  },
-  {
-    "id": "851f64a7-172d-4394-8228-a1ac9ecba338",
-    "subjectCode": "58318-002",
-    "preSubjectCode": "54868-5781"
-  },
-  {
-    "id": "c6eb6ebb-a88b-4d54-8e7b-bb4e7fdea06b",
-    "subjectCode": "0054-8595",
-    "preSubjectCode": "0378-0477"
-  },
-  {
-    "id": "1ee517df-de72-41d0-8801-1b46060ba3ff",
-    "subjectCode": "75933-1425",
-    "preSubjectCode": "43742-0057"
-  },
-  {
-    "id": "ce0268b1-32aa-446f-9324-f7c86ddc31cf",
-    "subjectCode": "0273-7003",
-    "preSubjectCode": "60949-160"
-  },
-  {
-    "id": "130f9af3-8112-478e-9fc0-1676870dfd7f",
-    "subjectCode": "63629-1531",
-    "preSubjectCode": "37205-345"
-  },
-  {
-    "id": "126f8a69-b2b1-4869-8970-fcb4550a1f2f",
-    "subjectCode": "67457-196",
-    "preSubjectCode": "60637-005"
-  },
-  {
-    "id": "727cf445-1e5c-445f-b310-e39bba3acb7c",
-    "subjectCode": "49349-790",
-    "preSubjectCode": "63981-560"
-  },
-  {
-    "id": "335a4db3-2191-43ae-9809-74bd3b477e57",
-    "subjectCode": "52007-240",
-    "preSubjectCode": "0268-0627"
-  },
-  {
-    "id": "efc53201-e890-4925-83fd-94eed6e7ea17",
-    "subjectCode": "0268-0627",
-    "preSubjectCode": "0456-2280"
-  },
-  {
-    "id": "57498bf0-a93a-48c3-96dd-837d8f72591d",
-    "subjectCode": "37205-345",
-    "preSubjectCode": "50988-212"
-  },
-  {
-    "id": "2d8e04f8-dedf-43ae-a47b-8733837765b7",
-    "subjectCode": "43063-382",
-    "preSubjectCode": "0074-7069"
-  },
-  {
-    "id": "3fe04ced-a655-4009-9ce1-9fa7301567d8",
-    "subjectCode": "0093-2277",
-    "preSubjectCode": "36987-2469"
-  }
-]
+[{"id":"f7fc46aa-07df-4773-9c7a-a1c561924015","subjectCode":"62756-161","preSubjectCode":"0093-1087"},
+{"id":"f05e8cb6-2ae3-465f-b7c1-7877a8e1882e","subjectCode":"49288-0575","preSubjectCode":"68180-479"},
+{"id":"8934f4c3-d14d-4b9c-921b-aa99c7ffb329","subjectCode":"63629-3371","preSubjectCode":"59220-4001"},
+{"id":"535835ed-6581-4248-b36d-01fb7df60a58","subjectCode":"43269-785","preSubjectCode":"13537-103"},
+{"id":"b7203603-5787-4dd2-bb7c-8ca68b39d366","subjectCode":"24338-136","preSubjectCode":"37808-536"},
+{"id":"56f8b3b7-80da-43f2-9e32-358d31fa5b78","subjectCode":"63629-4413","preSubjectCode":"11822-0944"},
+{"id":"66ef19ab-e223-4bec-bd77-2e3c5ca97a01","subjectCode":"43269-785","preSubjectCode":"49035-668"},
+{"id":"65aa4820-94bd-4b33-9bb1-566d57df8dd4","subjectCode":"61727-328","preSubjectCode":"0093-1087"},
+{"id":"1b6dfcca-69bb-41d3-8599-0bd2fc0f145e","subjectCode":"0832-1120","preSubjectCode":"0378-0032"},
+{"id":"1b2dd72c-4acc-4775-88c4-3711a10bb42f","subjectCode":"49035-668","preSubjectCode":"49221-3000"},
+{"id":"510d512a-52f4-4ba9-8616-3d56df9729f0","subjectCode":"49221-3000","preSubjectCode":"21695-108"},
+{"id":"9357a6d9-8a5f-46b1-bad2-baf70d5b0db7","subjectCode":"0078-0595","preSubjectCode":"0832-1120"},
+{"id":"4212ff9b-3265-4230-a8e5-e29f5a54527d","subjectCode":"42507-105","preSubjectCode":"43269-785"},
+{"id":"e86b1588-3ebb-42a3-bb4f-716fa5538109","subjectCode":"49643-380","preSubjectCode":"0378-6897"},
+{"id":"ad08a3f9-7b3b-4418-849b-42e50ba52eb9","subjectCode":"59572-415","preSubjectCode":"55154-9422"},
+{"id":"21f049bd-5ce3-4e94-9bd2-7a9d12860975","subjectCode":"76237-141","preSubjectCode":"61852-046"},
+{"id":"8eeb65eb-c21f-4adf-9298-7e99d657f615","subjectCode":"61852-046","preSubjectCode":"37808-072"},
+{"id":"fe3f0d1d-8b8b-4fb2-8067-b08cbc6d9f56","subjectCode":"67544-087","preSubjectCode":"55154-9422"},
+{"id":"eee6ccd1-f2e7-4609-9856-48f702d48d27","subjectCode":"53808-0395","preSubjectCode":"42549-586"},
+{"id":"9b8e70d1-4627-4297-afaa-994f5474be38","subjectCode":"0268-0885","preSubjectCode":"51125-006"},
+{"id":"f35c3c90-9e49-485e-93c5-900f25c7602f","subjectCode":"53808-0395","preSubjectCode":"24338-136"},
+{"id":"f671d629-474e-4a22-8097-27e5020525e8","subjectCode":"0078-0595","preSubjectCode":"61852-046"},
+{"id":"a0d229ca-5f0e-48ca-b4de-4543d7b25d94","subjectCode":"0378-6897","preSubjectCode":"13668-035"},
+{"id":"719cea2b-246a-4890-a582-619b74ad907a","subjectCode":"42549-586","preSubjectCode":"0078-0595"},
+{"id":"d1822bdc-0a03-42c6-b60f-f92fd0506c91","subjectCode":"42507-105","preSubjectCode":"0869-0831"},
+{"id":"58707952-b86a-4ba6-b2d0-cb61b1e4a708","subjectCode":"37808-536","preSubjectCode":"54868-5921"},
+{"id":"9136edd2-5d7c-4045-86c2-060158524b01","subjectCode":"0093-1087","preSubjectCode":"63629-3371"},
+{"id":"85bb2861-f751-46b3-9c51-f36c052795fd","subjectCode":"43269-785","preSubjectCode":"42291-667"},
+{"id":"0b3cf992-bb7b-4c8e-b62b-44a092d06bf3","subjectCode":"49221-3000","preSubjectCode":"63629-4413"},
+{"id":"abcdf6f2-f3c0-4eaf-a892-9cf10e512039","subjectCode":"59572-415","preSubjectCode":"67544-087"},
+{"id":"2e5a2a74-1512-4a3e-b5b3-c92074815401","subjectCode":"61727-328","preSubjectCode":"11822-0944"},
+{"id":"bcf1fc2c-2f39-4b8c-a12a-99630c8eba40","subjectCode":"11523-7341","preSubjectCode":"61727-328"},
+{"id":"0713170f-cfa0-426c-94b3-15e851d5b8f0","subjectCode":"42291-667","preSubjectCode":"13537-103"},
+{"id":"f8d3b32e-8b6a-4056-8d5b-b086f4eb620d","subjectCode":"13537-103","preSubjectCode":"30142-029"},
+{"id":"38a9b7f8-6008-4ba7-8cd1-b779e141debc","subjectCode":"49221-3000","preSubjectCode":"37808-072"},
+{"id":"9500cea2-be05-4d00-a325-b94003745248","subjectCode":"55154-9422","preSubjectCode":"61957-1603"},
+{"id":"6d15567d-9750-4712-93a6-c86f2a187771","subjectCode":"59220-4001","preSubjectCode":"51125-006"},
+{"id":"afdc0f13-7b38-4a1b-a71b-df714f56ca7f","subjectCode":"57237-044","preSubjectCode":"37808-536"},
+{"id":"9ac93019-0984-42ab-9d86-0109096e4664","subjectCode":"68180-479","preSubjectCode":"24338-136"},
+{"id":"4d0055d2-86ae-45bd-9591-1653b3c590c9","subjectCode":"63629-3371","preSubjectCode":"37012-388"},
+{"id":"a3f9197a-49e6-4b57-af8c-5a8d58b1bf00","subjectCode":"0268-0885","preSubjectCode":"48951-8216"},
+{"id":"7c327865-bd18-4de4-bb98-53fe8468dff9","subjectCode":"43269-785","preSubjectCode":"63629-3371"},
+{"id":"05fb3d17-f361-4b42-a260-8977c617b770","subjectCode":"0093-1087","preSubjectCode":"0832-1120"},
+{"id":"a1b4b233-a5db-4cc1-93c7-10535b590434","subjectCode":"0869-0831","preSubjectCode":"54868-5921"},
+{"id":"60487f52-f60e-4f14-9c1c-9a4013b479bf","subjectCode":"67544-087","preSubjectCode":"11523-7341"},
+{"id":"f634355c-e051-4f42-87bb-39e3fd0b0fd8","subjectCode":"61852-046","preSubjectCode":"11822-0944"},
+{"id":"cbfc7dc7-41fe-474a-9cd7-cf8dff5f35f2","subjectCode":"54868-5921","preSubjectCode":"0078-0595"},
+{"id":"63caf45b-cba7-4458-9c40-d66cff4c1423","subjectCode":"37808-536","preSubjectCode":"55154-9422"},
+{"id":"0b5ccb8e-408d-44cb-91c1-60e65b3341b8","subjectCode":"0378-0032","preSubjectCode":"42291-667"},
+{"id":"7362effc-b35f-494a-a56a-a9f3bdeb5396","subjectCode":"24338-136","preSubjectCode":"63629-4413"}]
