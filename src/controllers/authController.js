@@ -1,27 +1,14 @@
 import authService from "../services/authService.js";
+import { registerSchema } from "../validators/validateRegister.js";
+import { updatePasswordSchema } from "../validators/validateUpdatePassword.js";
+import { validate } from "../middlewares/validate.js";
 
 const authController = {
   async register(call, callback) {
     try {
-      const {
-        name,
-        firstLastName,
-        secondLastName,
-        rut,
-        email,
-        careerId,
-        password,
-        confirmPassword,
-      } = call.request;
+      const validatedData = validate(registerSchema, call.request);
       const newUser = await authService.register({
-        name,
-        firstLastName,
-        secondLastName,
-        rut,
-        email,
-        careerId,
-        password,
-        confirmPassword,
+        ...validatedData,
       });
       callback(null, newUser);
     } catch (error) {
@@ -33,12 +20,8 @@ const authController = {
   },
   async updatePassword(call, callback) {
     try {
-      const { userId, oldPassword, newPassword } = call.request;
-      const response = await authService.updatePassword(
-        userId,
-        oldPassword,
-        newPassword
-      );
+      const validateData = validate(updatePasswordSchema, call.request);
+      const response = await authService.updatePassword({ ...validateData });
       callback(null, response);
     } catch (error) {
       callback({

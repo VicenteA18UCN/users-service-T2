@@ -14,29 +14,24 @@ const authService = {
       email,
       careerId,
       password,
-      confirmPassword,
     } = data;
-
-    if (password !== confirmPassword) {
-      throw new Error("Passwords do not match");
-    }
 
     const role = await prisma.role.findFirst({
       where: { name: "Supervisor" },
     });
 
-    if (!role) throw new Error("Role not found");
+    if (!role) throw new Error("Rol no encontrado");
 
     const carrer = await prisma.career.findUnique({
       where: { id: careerId },
     });
 
-    if (!carrer) throw new Error("Career not found");
+    if (!carrer) throw new Error("Carrera no encontrada");
 
     const existingUser = await prisma.user.findUnique({
       where: { email },
     });
-    if (existingUser) throw new Error("User already exists with this email");
+    if (existingUser) throw new Error("El usuario ya existe con ese correo");
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -88,14 +83,16 @@ const authService = {
     };
   },
 
-  async updatePassword(userId, oldPassword, newPassword) {
+  async updatePassword(data) {
+    const { userId, oldPassword, newPassword } = data;
     const user = await prisma.user.findUnique({
       where: { id: userId },
     });
-    if (!user) throw new Error("User not found");
+
+    if (!user) throw new Error("Usuario no encontrado");
 
     const isMatch = await bcrypt.compare(oldPassword, user.hashedPassword);
-    if (!isMatch) throw new Error("Current password is incorrect");
+    if (!isMatch) throw new Error("La contraseña actual no coincide");
 
     const hashedNewPassword = await bcrypt.hash(newPassword, 10);
 
@@ -117,7 +114,7 @@ const authService = {
         persistent: true,
       }
     );
-    return { message: "Password updated successfully" };
+    return { message: "Contraseña actualizada correctamente" };
   },
 };
 

@@ -87,7 +87,8 @@ const userService = {
       const subject = allSubjects.find(
         (sub) => sub.code.toLowerCase() === code.toLowerCase()
       );
-      if (!subject) throw new Error(`Subject with code ${code} not found`);
+      if (!subject)
+        throw new Error(`Asignatura con código ${code} no encontrada`);
       return subject.id;
     });
 
@@ -95,7 +96,8 @@ const userService = {
       const subject = allSubjects.find(
         (sub) => sub.code.toLowerCase() === code.toLowerCase()
       );
-      if (!subject) throw new Error(`Subject with code ${code} not found`);
+      if (!subject)
+        throw new Error(`Asignatura con código ${code} no encontrada`);
       return subject.id;
     });
 
@@ -108,7 +110,7 @@ const userService = {
     const progressToAdd = subjectsToAdd.map((subjectId) => {
       if (currentSubjectIds.has(subjectId)) {
         throw new Error(
-          `Subject with ID ${subjectId} already exists in user progress`
+          `Asignatura con ID ${subjectId} ya está en el progreso del usuario`
         );
       }
       return { userId, subjectId, createdAt: new Date() };
@@ -117,7 +119,7 @@ const userService = {
     const progressToRemove = subjectsToRemove.filter((subjectId) => {
       if (!currentSubjectIds.has(subjectId)) {
         throw new Error(
-          `Subject with ID ${subjectId} not found in user progress`
+          `Asignatura con ID ${subjectId} no está en el progreso del usuario`
         );
       }
       return subjectId;
@@ -146,7 +148,7 @@ const userService = {
     }
 
     if (!addResult && !removeResult) {
-      throw new Error("Cannot update user progress");
+      throw new Error("No se realizaron cambios en el progreso del usuario");
     }
 
     const updatedProgress = await prisma.userProgress.findMany({
