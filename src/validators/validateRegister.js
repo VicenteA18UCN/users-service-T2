@@ -22,7 +22,7 @@ export const registerSchema = Joi.object({
   }),
   email: Joi.string()
     .email()
-    .pattern(/^([a-zA-Z]+\.)*ucn\.cl$/)
+    .pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]*ucn\.cl$/)
     .required()
     .messages({
       "string.empty": "El correo electrónico es obligatorio",
