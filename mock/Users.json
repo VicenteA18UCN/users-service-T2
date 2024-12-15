@@ -1,5 +1,27 @@
 [
   {
+    "id": "0e4942a4-702f-421c-ae2c-ec14b8e27cbc",
+    "name": "Vicente",
+    "firstLastName": "Alarcón",
+    "secondLastName": "Campillay",
+    "rut": "21177605-6",
+    "email": "vicente.alarcon@ucn.cl",
+    "careerId": "666a70d0-8435-47c9-bcbe-5fcbfb79a71d",
+    "roleId": "7dd96c94-864e-4b57-8aad-f478da2be617",
+    "hashedPassword": "$2b$10$zqpZr6bELgAIt8TxleQPc.NTdhYC/uMXy2L3ez5R1rGuDYlD18fdy"
+  },
+  {
+    "id": "0847ed18-b28a-4da7-ae6f-18cb76d8c6f0",
+    "name": "Matias",
+    "firstLastName": "Fontecilla",
+    "secondLastName": "Busch",
+    "rut": "21729131-3",
+    "email": "matias.fontecilla@ucn.cl",
+    "careerId": "666a70d0-8435-47c9-bcbe-5fcbfb79a71d",
+    "roleId": "7dd96c94-864e-4b57-8aad-f478da2be617",
+    "hashedPassword": "$2b$10$TPgFQZaJEb4mcjS59D92ouUa.BaT0OcCVQiGmqqDTF3sQDP4QYt2C"
+  },
+  {
     "id": "d3ef596f-e949-4f97-867e-d8d13720dd7e",
     "name": "Teresina",
     "firstLastName": "Cranna",
