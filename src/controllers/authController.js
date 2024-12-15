@@ -20,6 +20,7 @@ const authController = {
   },
   async updatePassword(call, callback) {
     try {
+      console.log(call.request);
       const validatedData = validate(updatePasswordSchema, call.request);
       const response = await authService.updatePassword({ ...validatedData });
       callback(null, response);

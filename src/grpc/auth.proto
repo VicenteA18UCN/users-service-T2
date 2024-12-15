@@ -34,6 +34,7 @@ message UpdatePasswordRequest {
   string userId = 1;
   string oldPassword = 2;
   string newPassword = 3;
+  string confirmNewPassword = 4;
 }
 
 message UpdatePasswordResponse {

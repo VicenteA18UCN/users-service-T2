@@ -22,7 +22,7 @@ const userController = {
   },
   async updateProfile(call, callback) {
     try {
-      const { id, name, firstLastName, secondLastName } = call.request;
+      const { name, firstLastName, secondLastName } = call.request;
       validate(updateProfileSchema, {
         name,
         firstLastName,

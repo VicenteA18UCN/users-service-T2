@@ -32,4 +32,11 @@ export const updatePasswordSchema = Joi.object({
       "string.max": "La nueva contraseña no puede exceder los 16 caracteres",
       "any.required": "La nueva contraseña es requerida",
     }),
+  confirmNewPassword: Joi.string()
+    .valid(Joi.ref("newPassword"))
+    .required()
+    .messages({
+      "any.only": "Las contraseñas no coinciden",
+      "any.required": "Es obligatorio repetir la contraseña"
+    }),
 });
