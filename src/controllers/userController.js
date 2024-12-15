@@ -1,4 +1,7 @@
+import { validate } from "../middlewares/validate.js";
 import userService from "../services/userService.js";
+import { cleanObject } from "../utils/cleanObject.js";
+import { updateProfileSchema } from "../validators/validateUpdateProfile.js";
 
 const userController = {
   async getAll(call, callback) {
@@ -19,6 +22,12 @@ const userController = {
   },
   async updateProfile(call, callback) {
     try {
+      const { id, name, firstLastName, secondLastName } = call.request;
+      validate(updateProfileSchema, {
+        name,
+        firstLastName,
+        secondLastName,
+      });
       const user = await userService.updateProfile(call.request);
       callback(null, user);
     } catch (error) {
