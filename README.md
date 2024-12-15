@@ -39,7 +39,7 @@ Este servicio forma parte del Taller 2 de Arquitectura de Sistemas.
      DATABASE_URL="postgresql://username:password@localhost:port/server"
      RABBITMQ_URL=amqp://localhost:5672
      SERVER_URL=localhost
-     GRPC_PORT=50051
+     GRPC_PORT=5003
      ```
 
 ---
