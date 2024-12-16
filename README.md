@@ -30,7 +30,7 @@ Este servicio forma parte del Taller 2 de Arquitectura de Sistemas.
    - Copia el archivo `.env.template` a `.env`:
 
      ```bash
-     cp .env.example .env
+     cp .env.template .env
      ```
 
    - Modifica las variables de entorno en el archivo `.env` según corresponda.
